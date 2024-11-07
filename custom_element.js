@@ -1,5 +1,3 @@
-alert("Kris was here!");
-
 class Center extends HTMLElement{
     connectedCallback(){
         this.innerHTML =` <div style="text-align:center">${this.innerHTML}</div>`
@@ -15,3 +13,13 @@ class Year extends HTMLElement{
 }
 
 customElements.define("x-year", Year);
+
+class Titletip extends HTMLElement{
+    connectedCallback(){
+        this.innerHTML =` <abbr style="color:#F00;" title="Hello!">${this.innerHTML}</abbr>`
+    }
+}
+
+customElements.define("x-tooltip", Titletip);
+
+alert("Kris was here!");
